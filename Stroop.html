@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Statistics Project</title>
+</head>
+<body>
+<br>	
+<h2><center>Data Analyst Nanodegree : Statistics PS1 - Stroop Effect</center></h2>	
+<br>	
+1. <em>What is our independent variable? What is our dependent variable?</em>
+<br>	
+Independent Variable  - <br>	
+The independent variable in this experiment was the condition (congruent words and incongruent words)<br>	
+<br>	
+Dependent Variable -<br>	
+The dependent variable in this experiment was the time the participants took to complete the task.<br>	
+<br>	
+2. <em>What is our independent variable? What is our dependent variable?</em>
+<br>
+H<sub>0</sub> : μ<sub>C</sub> = μ<sub>I</sub>  // population mean of congruent condition = population mean of incongruent condition<br>
+H<sub>A</sub> : μ<sub>C</sub> ≠ μ<sub>I</sub>  // population mean of congruent condition does not equal population mean of incongruent condition<br>
+<br>
+Since we are trying to figure out whether or not they are equal, this is a sensible set of hypotheses to start out with. If we had a prior belief that one was faster than the other, you could set your belief (ie μ<sub>c</sub> < μ<sub>i</sub> ) as the alternative hypothesis and set the H0 as the opposite (ie μ<sub>C</sub> >= μ<sub>I</sub>). In this case, since we are not entering with a prior belief and trying to show their difference, this set of hypotheses is appropriate.<br>
+<br>
+I will perform a dependent t-test. Since this experiment uses a repeated measures design, where each participant has multiple measures, a dependent t-test is appropriate.<br>
+<br>
+3.<em>Report some descriptive statistics regarding this dataset. Include at least one measure of central tendency and at least one measure of variability.</em><br>
+<br>
+x&#772;<sub>C</sub> = 14.051<br>
+x&#772;<sub>I</sub> = 22.016<br>
+n = 24<br>
+<br>
+point difference for x&#772;<sub>C</sub>-x&#772;<sub>I</sub> = 22.016= -7.965<br>
+s = sample standard deviation of the differences = 4.865<br>
+<br>
+4.<em>Provide one or two visualizations that show the distribution of the sample data. Write one or two sentences noting what you observe about the plot or plots.</em>
+<div>
+    <a href="https://plot.ly/~salasks/40/?share_key=sBk05aiwwwDM22Pf5Jv0ut" target="_blank" title="Stroop Effect (Boxplot)" style="display: block; text-align: center;"><img src="https://plot.ly/~salasks/40.png?share_key=sBk05aiwwwDM22Pf5Jv0ut" alt="Stroop Effect (Boxplot)" style="max-width: 100%;width: 722px;"  width="722" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="salasks:40" sharekey-plotly="sBk05aiwwwDM22Pf5Jv0ut" src="https://plot.ly/embed.js" async></script>
+</div>
+<div>
+    <a href="https://plot.ly/~salasks/45/" target="_blank" title="Stroop Effect (Histogram)" style="display: block; text-align: center;"><img src="https://plot.ly/~salasks/45.png" alt="Stroop Effect (Histogram)" style="max-width: 100%;width: 722px;"  width="722" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="salasks:45"  src="https://plot.ly/embed.js" async></script>
+</div>
+
+Both of the above visualizations were created on <a href="plot.ly">plot.ly</a><br>
+The box plot shows that the congruent times were centered around 10-15 seconds, whereas the incongruent times were considerably slower with a median above 20 seconds. The boxplot does a better job showing where exactly the median falls and where the outliers fall. The histogram does a better showing the exact number of people that recorded times in various ranges.<br>
+<br>
+Both are appropriate choices as they show the shape of the data and the difference between the two conditions.<br>
+<br>
+5. Now, perform the statistical test and report your results. What is your confidence level and your critical statistic value? Do you reject the null hypothesis or fail to reject it? Come to a conclusion in terms of the experiment task. Did the results match up with your expectations?<br>
+<br>
+t = (x&#772;<sub>C</sub> - x&#772;<sub>I</sub>) / (s/&#8730;<span style="text-decoration:overline">n</span>) -8.021<br>
+confidence interval = mean difference &plusmn; t<sub>CRITICAL</sub> (s / &#8730;<span style="text-decoration:overline">n</span>) = (-10.014,-5.915)<br>
+t<sub>CRITICAL</sub> values = +/- 2.064<br>
+<br>
+The t statistic is greater than the absolute value of the t<sub>critical</sub> value. This means that it falls inside the critical region, and we can safely <strong>reject</strong> the null hypothesis. We conclude that the congruent condition is significantly faster than the incongruent condition. The results did line up with expectations, because it was much easier (and faster) to do the congruent test than the incongruent test.<br>
+<br>
+6. <em>Optional: What do you think is responsible for the effects observed? Can you think of an alternative or similar task that would result in a similar effect? Some research about the problem will be helpful for thinking about these two questions!</em>
+There is some cognitive dissonance when saying the names of the colors in the incongruent condition. We have spent so much of our lives reading things that are written down, that resisting that natural impulse takes extra time. <br>
+I came up with a test that I think can show a similar effect. Like recognizing words, recognizing numbers is also instinctual. In the below test, the participant says the number of digits in each square. In the congruent condition, the number of digits in the square is the same as the digit in the square. In the incogruent condition, the number of digits in the square is not the same as the digit in the square.<br>
+<img src="https://doc-10-5o-docs.googleusercontent.com/docs/securesc/k8mhpcih7knmi6uvuptq1c5duc8etvt0/70mbpjcipfcbfv30e2i8i8t3hj4hvjq5/1440964800000/02101687000280132138/02101687000280132138/0B8DQAFHYvmKcRzZoMmpveGEzSHlHVDJwUk56ckxCUnBOOVJJ?e=view" height="200px" alt="Number Stroop">
+<br>
+I would expect that this experiment would have a similar result to the Stroop effect that we completed for this assignment.<br>
+<br>
+<em>Resources:</em><br>
+Lesson 10a of the Udacity Statistics Course<br>
+Various online forums for determining the way to write statistical symbols online<br>
+</body>
+</html>
